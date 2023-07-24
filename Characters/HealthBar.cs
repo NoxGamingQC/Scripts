@@ -1,15 +1,17 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
+using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
     public Slider healthValue;
     public bool changeBarColorByHealthValue = false;
+    public bool hasTextOnHealthBar = false;
+    public bool usePercentText = false;
     public Gradient barColorScheme;
     public Image bar;
-
+    public Text text;
     public bool needToFollowCameraView = false;
     public Transform viewCamera;
 
@@ -17,6 +19,13 @@ public class HealthBar : MonoBehaviour
     {
         healthValue.maxValue = health;
         healthValue.value = health;
+        if(hasTextOnHealthBar) {
+            if(usePercentText) {
+                text.text = ((health * healthValue.maxValue) / 100) + "%";
+            } else {
+                text.text = "" + health;
+            }
+        }
         if(changeBarColorByHealthValue) {
             bar.color = barColorScheme.Evaluate(1f);
         }
@@ -24,6 +33,13 @@ public class HealthBar : MonoBehaviour
 
     public void setHealth(int health) {
         healthValue.value = health;
+        if(hasTextOnHealthBar) {
+            if(usePercentText) {
+                text.text = ((health * healthValue.maxValue) / 100) + "%";
+            } else {
+                text.text = "" + health;
+            }
+        }
         if(changeBarColorByHealthValue) {
             bar.color = barColorScheme.Evaluate(healthValue.normalizedValue);
         }
