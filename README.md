@@ -9,6 +9,6 @@ Just a bunch of scripts follow the folder to what you need.
 
 ## Scripts available
 
-![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+[![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://github.com/NoxGamingQC/Scripts/tree/master/Shell)
 ![Unity](https://img.shields.io/badge/unity-333333.svg?style=for-the-badge&labelColor=333333&logo=unity&logoColor=white)
 ![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)
